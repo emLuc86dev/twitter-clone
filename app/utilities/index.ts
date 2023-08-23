@@ -1,1 +1,1 @@
-export type {Children as ChildrenProp} from './childrenProp'
+export type { Children as ChildrenProp } from './childrenProp'
