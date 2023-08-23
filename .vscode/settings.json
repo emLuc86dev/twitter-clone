@@ -1,0 +1,16 @@
+{
+    "eslint.format.enable": true,
+    "editor.formatOnSave": true,
+    "javascript.format.enable": false,
+    "javascript.format.insertSpaceAfterSemicolonInForStatements": false,
+    "javascript.preferences.quoteStyle": "single",
+    "typescript.preferences.quoteStyle": "single",
+    "typescript.format.insertSpaceAfterTypeAssertion": false,
+    "eslint.codeActionsOnSave.rules": null,
+    "javascript.format.insertSpaceAfterConstructor": true,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+    "typescript.format.enable": false,
+    "javascript.validate.enable": false,
+    "eslint.lintTask.enable": true,
+    "eslint.nodeEnv": ""
+}
