@@ -1,10 +1,14 @@
 'use client'
-import { useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { type Session, createClientComponentClient } from '@supabase/auth-helpers-nextjs'
 import { GithubIcon } from './github-icon'
 
-export function AuthButton () {
-  const [session, setSession] = useState<Session | null>(null)
+interface SessionProp {
+  session: Session | null
+}
+
+export function AuthButton ({ session }: SessionProp) {
+  const router = useRouter()
   const supabase = createClientComponentClient()
 
   const handleSignIn = async () => {
@@ -18,16 +22,8 @@ export function AuthButton () {
 
   const handleSignOut = async () => {
     await supabase.auth.signOut()
+    router.refresh()
   }
-
-  useEffect(() => {
-    const getSession = async () => {
-      const { data } = await supabase.auth.getSession()
-
-      setSession(data.session)
-    }
-    getSession()
-  }, [])
 
   return (
         <header>
