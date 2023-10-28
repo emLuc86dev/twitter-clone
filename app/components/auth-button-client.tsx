@@ -8,7 +8,7 @@ interface SessionProp {
   session: Session | null
 }
 
-export function AuthButton ({ session }: SessionProp) {
+export function AuthButtonClient ({ session }: SessionProp) {
   const router = useRouter()
   const supabase = createClientComponentClient()
 
