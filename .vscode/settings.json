@@ -6,11 +6,14 @@
     "javascript.preferences.quoteStyle": "single",
     "typescript.preferences.quoteStyle": "single",
     "typescript.format.insertSpaceAfterTypeAssertion": false,
-    "eslint.codeActionsOnSave.rules": null,
+    "eslint.codeActionsOnSave.rules": [
+        "true"
+    ],
     "javascript.format.insertSpaceAfterConstructor": true,
     "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
     "typescript.format.enable": false,
     "javascript.validate.enable": false,
     "eslint.lintTask.enable": true,
-    "eslint.nodeEnv": ""
+    "eslint.nodeEnv": "",
+    "editor.formatOnPaste": true
 }
