@@ -3,6 +3,7 @@ import { useRouter } from 'next/navigation'
 import { type Session, createClientComponentClient } from '@supabase/auth-helpers-nextjs'
 import { GithubIcon } from './github-icon'
 import BtnOpenCloseSession from './btn-open-close-session'
+import { CloseIcon } from './close-icon'
 
 interface SessionProp {
   session: Session | null
@@ -32,7 +33,9 @@ export function AuthButtonClient ({ session }: SessionProp) {
               ? <BtnOpenCloseSession title='Inicia sesion con Github' onClick={handleSignIn}>
               <GithubIcon />
             </BtnOpenCloseSession>
-              : <BtnOpenCloseSession title='Cerrar session' onClick={handleSignOut} />}
+              : <BtnOpenCloseSession title='Cerrar session' onClick={handleSignOut}>
+                <CloseIcon />
+                </BtnOpenCloseSession>}
         </header>
   )
 }
